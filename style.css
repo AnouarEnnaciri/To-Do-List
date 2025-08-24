@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme tokens */
+:root {
+  --bg: #a9b0c4;
+  --card: #ffffff;
+  --text: #000000;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+  --filter-bg: #101218;
+  --filter-text: #9aa0a6;
+  --border: #242833;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  display: block;
+  padding: 20px;
+}
+.app {
+  width: 400px;
+  margin: 0 auto;
+  background: var(--card);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+h1 {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+#theme-toggle {
+  float: right;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 15px;
+}
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+}
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.filters button {
+  flex: 1;
+  padding: 8px;
+  background: var(--filter-bg);
+  border: 1px solid #000;
+  color: var(--filter-text);
+  cursor: pointer;
+}
+.filters .active {
+  color: #fff;
+  border-color: #2200e6;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Inline edit */
+li.editing .edit-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+/* Status row */
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Dark theme */
+body.dark {
+  --bg: #121212;
+  --card: #1b1b1f;
+  --text: #e6e6e6;
+  --btn-bg: #2a2a2e;
+  --btn-text: #e6e6e6;
+  --filter-bg: #2a2a2e;
+  --filter-text: #c0c4cc;
+  --border: #2f3340;
+  --shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+}
